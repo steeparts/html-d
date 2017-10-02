@@ -16,7 +16,8 @@ PEST 911
 	#2:
 
 		- Node.js (npm: lessc + less-plugin-autoprefix);
-		- Sublime Text 3 (AutoFileName, Emmet, Flexbox Snippets, Hayaku, LiveReload, LESS, Less2Css, SublimeOnSaveBuild);
+		- Sublime Text 3 (AutoFileName, Emmet, Flexbox Snippets, Hayaku, 
+		                  LiveReload, LESS, Less2Css, SublimeOnSaveBuild);
 		- saucelabs.com (для тестирования кроссбраузерности).
 
 
