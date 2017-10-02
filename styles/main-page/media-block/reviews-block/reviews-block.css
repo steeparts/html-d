@@ -1,0 +1,59 @@
+.reviews-block {
+  width: calc(28.66666667%);
+  padding: 0 5px;
+}
+.reviews-block a {
+  display: inline-block;
+  line-height: 16px;
+  border-bottom: 1px solid #82c044;
+}
+.reviews-block a:hover {
+  color: #55ab00;
+}
+.reviews-block__photo-container {
+  width: 80px;
+  height: 80px;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: flex;
+  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  -webkit-justify-content: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: baseline;
+  align-items: baseline;
+  overflow: hidden;
+}
+.reviews-block__user {
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: flex;
+  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  -webkit-box-orient: row;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  height: 80px;
+}
+.reviews-block__user-info {
+  padding-left: 15px;
+}
+.reviews-block__user-name {
+  font-size: 18px;
+  font-weight: 700;
+}
+.reviews-block__user-desc {
+  color: #909090;
+}
+.reviews-block__text-wrapper {
+  max-height: 100px;
+  overflow: hidden;
+}

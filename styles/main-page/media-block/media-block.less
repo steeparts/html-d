@@ -1,0 +1,25 @@
+// * Vars *
+@import '../../less-vars/less-vars';
+
+// * Mixins *
+@import '../../less-mixins/less-mixins';
+
+.media-block {
+	width: 100%;
+	height: 300px;
+	margin: 40px 0 10px 0;
+	padding: 0 10px;
+	.flex-sb-row;
+}
+.video-block,
+.reviews-block,
+.subscribe-block {
+	.flex-sb-col;
+	
+	.section-title;
+	
+	&__content {
+		.flex-sb-col;
+		height: 240px;
+	}
+}

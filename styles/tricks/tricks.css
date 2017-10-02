@@ -1,0 +1,52 @@
+.br {
+  height: 3px;
+  clear: both;
+}
+.separator {
+  height: 1px;
+  clear: both;
+  background: #ececec;
+}
+iframe {
+  width: 100% !important;
+}
+.youtube {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/hqdefault.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.youtube .play {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  opacity: .8;
+  background: url(../img/play.png) no-repeat center / 18%;
+}
+.youtube .play:hover {
+  opacity: 1;
+}
+.quote-left,
+.quote-right {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background: url(../img/sprite.png) no-repeat;
+  -webkit-background-size: 160px 100px;
+  -o-background-size: 160px 100px;
+  background-size: 160px 100px;
+  position: relative;
+  top: 2px;
+}
+.quote-left {
+  background-position: -101px -6px;
+}
+.quote-right {
+  background-position: -125px -6px;
+}

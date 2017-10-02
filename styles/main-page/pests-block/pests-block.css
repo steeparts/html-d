@@ -1,0 +1,94 @@
+.pests-block {
+  margin-top: 40px;
+  padding: 0 10px;
+}
+.pests-block__title {
+  font-family: 'PT Sans Caption', sans-serif;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+.pests-block .pests-list {
+  padding: 40px 0;
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: flex;
+  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  -webkit-justify-content: space-around;
+  -webkit-box-pack: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  -webkit-box-orient: row;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+.pests-block .pests-list__item {
+  width: calc(16.66666667%);
+  min-height: 170px;
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: flex;
+  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  -webkit-justify-content: space-around;
+  -webkit-box-pack: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  -webkit-box-orient: column;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.pests-block .pests-list__item-photo {
+  width: 125px;
+  height: 125px;
+  border: 2px solid transparent;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+.pests-block .pests-list__item-photo_mosquitoes {
+  background: url('../img/p1.png') no-repeat;
+  background-position: -10px -7px;
+  background-size: 164px;
+}
+.pests-block .pests-list__item-photo_cockroaches {
+  background: url('../img/p2.png') no-repeat;
+  background-position: -10px -9px;
+  background-size: 164px;
+}
+.pests-block .pests-list__item-photo_rodents {
+  background: url('../img/p3.png') no-repeat;
+  background-position: -25px -7px;
+  background-size: 157px;
+}
+.pests-block .pests-list__item-photo_birds {
+  background: url('../img/p4.png') no-repeat;
+  background-position: -120px -70px;
+  background-size: 300px;
+}
+.pests-block .pests-list__item-photo_mices {
+  background: url('../img/p5.png') no-repeat;
+  background-position: -80px -20px;
+  background-size: 250px;
+}
+.pests-block .pests-list__item-photo_rats {
+  background: url('../img/p6.png') no-repeat;
+  background-position: -35px -15px;
+  background-size: 240px;
+}
+.pests-block .pests-list__item-link {
+  font-weight: 700;
+  font-size: 18px;
+  border-bottom: 2px solid #82c044;
+}
+.pests-block .pests-list__item-link:hover {
+  color: #82c044;
+  border-color: transparent;
+}

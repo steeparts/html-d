@@ -1,0 +1,47 @@
+// * Vars *
+@import '../../less-vars/less-vars';
+
+// * Mixins *
+@import '../../less-mixins/less-mixins';
+
+.pests-block {	
+	margin-top: 40px;
+	padding: 0 10px;
+	
+	.section-title;
+
+	.pests-list {
+		padding: 40px 0;
+		.flex-sa-row;
+		
+		&__item {
+			width: calc(2 * 100% / 12);
+			min-height: 170px;
+			.flex-sa-col;
+			.ai(center);
+		}
+			&__item-photo {
+				width: 125px;
+				height: 125px;
+				border: 2px solid transparent;
+				.borderRadius(50%);	
+							
+				&_mosquitoes  { .pests-photo(@img : '../img/p1.png', @pos :   -10px -7px, @size : 164px); }
+				&_cockroaches { .pests-photo(@img : '../img/p2.png', @pos :   -10px -9px, @size : 164px); }
+				&_rodents 	  { .pests-photo(@img : '../img/p3.png', @pos :   -25px -7px, @size : 157px); }
+				&_birds 	  { .pests-photo(@img : '../img/p4.png', @pos : -120px -70px, @size : 300px); }
+				&_mices		  { .pests-photo(@img : '../img/p5.png', @pos :  -80px -20px, @size : 250px); }
+				&_rats		  { .pests-photo(@img : '../img/p6.png', @pos :  -35px -15px, @size : 240px); }
+			}
+			&__item-link {
+				font-weight: 700;
+				font-size: 18px;
+				border-bottom: 2px solid @green;
+				
+				&:hover  {
+					color: @green;
+					border-color: transparent;
+				}
+			}
+	}
+}

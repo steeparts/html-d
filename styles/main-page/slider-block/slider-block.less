@@ -1,0 +1,105 @@
+// * Vars *
+@import '../../less-vars/less-vars';
+
+// * Mixins *
+@import '../../less-mixins/less-mixins';
+
+.slider-block {
+	.flex-sb-row;
+	.ai(normal);
+	padding: 30px 0;
+	
+	.left-side {
+		width: calc(4 * 98% / 12); //320px;
+		//height: 335px;
+		.jc(flex-start);
+		overflow: hidden;
+		
+		.help-list {
+			.flex-sb-col;
+			padding-left: 70px;
+			height: 100%;
+			line-height: 18px;
+			
+			&__item {
+				position: relative;
+				
+				&_wholesalers,
+				&_question,
+				&_video {
+					&:before {
+						position: absolute;
+					    left: -60px;
+					    top: 0;
+					    content: '';
+					    width: 40px;
+					    height: 40px;
+					    background: url(../img/icons.png) no-repeat;
+					    border: 3px solid @green;
+					    .borderRadius(50%);
+					}
+				}
+				&_wholesalers:before { background-position: 3px center; }
+				&_question:before { background-position: -53.5px center; }
+				&_video:before { background-position: -113px center; }
+			}
+				&__item-link {
+					font-size: 18px;
+					font-weight: 700;
+					display: inline-block;
+					position: relative;
+					margin: 13px 0 7px 0;
+					
+					&:hover {
+					    color: @green;
+					}
+					
+					&:after {
+					    position: absolute;
+					    left: 0;
+					    bottom: -3px;
+					    content: '';
+					    width: 100%;
+					    height: 1px;
+					    border-bottom: 2px solid @green;
+					}
+				}
+				&__item-desc {
+					color: @gray;
+				}
+		}
+	}
+	.right-side {
+		width: calc(8 * 98% / 12); //630px;
+		max-height: 335px;
+		.jc(flex-end);
+		text-align: right;
+		overflow: hidden;
+		.borderRadius;
+		
+		.slider {
+			height: 100%;
+			.flex-sb-row;
+			position: relative;
+			
+			&__item {
+				display: inline-block;
+				height: 100%;
+				
+				img {
+					width: auto;
+					height: auto;
+				}				
+			}
+
+			.controlPanel(
+				@c-pad: 10px, 
+				@c-prev-pos: 0 -75px, 
+				@c-next-pos: -26px -75px,
+				@c-prev-hov-pos: 0 -75px,
+				@c-next-hov-pos: -26px -75px,
+				@c-hov-opacity: .8
+			);		
+		}
+	}
+}

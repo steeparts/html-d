@@ -1,0 +1,113 @@
+// * Vars *
+@import '../../less-vars/less-vars';
+
+// * Mixins *
+@import '../../less-mixins/less-mixins';
+
+.goods-block {
+	.goods-nav {
+		background: @green;
+		padding: 0 50px;
+		.borderRadius;
+		-webkit-border-bottom-left-radius: 0;
+		        border-bottom-left-radius: 0;
+		-webkit-border-bottom-right-radius: 0;
+		        border-bottom-right-radius: 0;
+		
+		&__menu {
+			.flex-sb-row;
+			.ai(center);
+		}
+			&__item {
+				width: 15%;
+				height: 45px;
+				padding: 12px 0;
+				text-align: center;
+				text-transform: uppercase;
+				color: #000;
+				cursor: pointer;
+				position: relative;
+				
+				&:hover,
+				&_active {
+					color: #fff;
+					font-weight: 700;
+				}
+
+				&_active:after {
+					position: absolute;
+					content: '';
+					width: 0;
+					height: 0;
+					margin: 0;
+				    bottom: 0;
+				    left: 36%;
+				    border-top: 8px solid transparent;
+				    border-right: 16px solid transparent;
+				    border-left: 16px solid transparent;
+				    border-bottom: 8px solid @light-gray;
+				}
+			}
+	}
+
+	.goods-carousel {
+		position: relative;
+		padding: 35px 15px;
+		background: @light-gray;		
+		.borderRadius;
+		-webkit-border-top-left-radius: 0;
+		        border-top-left-radius: 0;
+		-webkit-border-top-right-radius: 0;
+		        border-top-right-radius: 0;
+		
+		&__container {
+			.flex-sa-row;
+			min-height: 200px;
+		}		
+			&__item {
+				width: calc(3* 75%/ 12);
+				background: #fff;
+				padding: 10px;
+				cursor: pointer;
+				border: 2px solid transparent;
+				.borderRadius;
+				.flex-sb-col;
+				.ai(center);
+				text-align: center;
+				z-index: 2;
+				
+				&:hover {
+					border: 2px solid @green !important;
+				}
+				
+				img {
+					height: 105px;
+				}				
+				&-title {
+					line-height: 16px;
+					max-width: 145px;
+					max-height: 34px;
+    				overflow: hidden;
+				}
+				&-sum {
+					.textEllipsis;
+				}					    
+					&-price {
+						font-size: 20px;
+						font-weight: 700;
+					}
+					&-valuta {
+						font-size: 14px;
+					}
+			}
+
+			.controlPanel(
+				@c-pad: 12px, 
+				@c-prev-pos: -68px -75px, 
+				@c-next-pos: -90px -75px,				
+				@c-prev-hov-pos: -137px -75px,
+				@c-next-hov-pos: -159px -75px,
+				@c-hov-opacity: 1
+			);
+	}
+}

@@ -1,0 +1,43 @@
+// * Vars *
+@import '../../less-vars/less-vars';
+
+// * Mixins *
+@import '../../less-mixins/less-mixins';
+
+.top-nav {
+	width: 100%;
+	
+	&__hamburger {
+		padding: 10px;
+		text-align: center;
+		cursor: pointer;
+		display: none;
+		
+		&-icon {
+			position: relative;
+		    padding: 0 10px;
+		    top: 2px;
+			font-size: 20px;
+		}
+
+		&-text {
+			font-size: 18px;
+		}		
+	}
+	
+	&__menu {
+		.flex-sb-row;
+		.ai(center);
+	}
+		&__item {
+			padding: 12px 0;
+		}
+			&__link {
+				text-transform: uppercase;
+				color: #000;
+				
+				&:hover {
+					color: #fff;
+				}
+			}
+}

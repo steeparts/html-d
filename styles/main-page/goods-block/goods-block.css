@@ -1,0 +1,227 @@
+.goods-block .goods-nav {
+  background: #82c044;
+  padding: 0 50px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-border-bottom-left-radius: 0;
+  border-bottom-left-radius: 0;
+  -webkit-border-bottom-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.goods-block .goods-nav__menu {
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: flex;
+  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  -webkit-justify-content: space-between;
+  -webkit-box-pack: space-between;
+  -ms-flex-pack: space-between;
+  justify-content: space-between;
+  -webkit-box-orient: row;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.goods-block .goods-nav__item {
+  width: 15%;
+  height: 45px;
+  padding: 12px 0;
+  text-align: center;
+  text-transform: uppercase;
+  color: #000;
+  cursor: pointer;
+  position: relative;
+}
+.goods-block .goods-nav__item:hover,
+.goods-block .goods-nav__item_active {
+  color: #fff;
+  font-weight: 700;
+}
+.goods-block .goods-nav__item_active:after {
+  position: absolute;
+  content: '';
+  width: 0;
+  height: 0;
+  margin: 0;
+  bottom: 0;
+  left: 36%;
+  border-top: 8px solid transparent;
+  border-right: 16px solid transparent;
+  border-left: 16px solid transparent;
+  border-bottom: 8px solid #ececec;
+}
+.goods-block .goods-carousel {
+  position: relative;
+  padding: 35px 15px;
+  background: #ececec;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-border-top-left-radius: 0;
+  border-top-left-radius: 0;
+  -webkit-border-top-right-radius: 0;
+  border-top-right-radius: 0;
+}
+.goods-block .goods-carousel__container {
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: flex;
+  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  -webkit-justify-content: space-around;
+  -webkit-box-pack: space-around;
+  -ms-flex-pack: space-around;
+  justify-content: space-around;
+  -webkit-box-orient: row;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  min-height: 200px;
+}
+.goods-block .goods-carousel__item {
+  width: calc(18.75%);
+  background: #fff;
+  padding: 10px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: flex;
+  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  -webkit-justify-content: space-between;
+  -webkit-box-pack: space-between;
+  -ms-flex-pack: space-between;
+  justify-content: space-between;
+  -webkit-box-orient: column;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  align-items: center;
+  text-align: center;
+  z-index: 2;
+}
+.goods-block .goods-carousel__item:hover {
+  border: 2px solid #82c044 !important;
+}
+.goods-block .goods-carousel__item img {
+  height: 105px;
+}
+.goods-block .goods-carousel__item-title {
+  line-height: 16px;
+  max-width: 145px;
+  max-height: 34px;
+  overflow: hidden;
+}
+.goods-block .goods-carousel__item-sum {
+  max-width: 145px;
+  white-space: nowrap;
+  overflow: hidden;
+  -ms-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+}
+.goods-block .goods-carousel__item-price {
+  font-size: 20px;
+  font-weight: 700;
+}
+.goods-block .goods-carousel__item-valuta {
+  font-size: 14px;
+}
+.goods-block .goods-carousel__control-panel {
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: flex;
+  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  -webkit-justify-content: space-between;
+  -webkit-box-pack: space-between;
+  -ms-flex-pack: space-between;
+  justify-content: space-between;
+  -webkit-box-orient: row;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  padding: 12px;
+}
+.goods-block .goods-carousel__ctrl {
+  display: -webkit-box;
+  /* OLD - iOS 6-, Safari 3.1-6 */
+  display: -ms-flexbox;
+  /* TWEENER - IE 10 */
+  display: flex;
+  /* NEW, Spec - Opera 12.1, Firefox 20+ */
+  -webkit-box-orient: row;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+.goods-block .goods-carousel__ctrl_prev,
+.goods-block .goods-carousel__ctrl_next {
+  width: 20px;
+  height: 42px;
+  background: url(../img/sprite.png) no-repeat;
+  cursor: pointer;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -ms-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+.goods-block .goods-carousel__ctrl_prev {
+  background-position: -68px -75px;
+}
+.goods-block .goods-carousel__ctrl_prev:hover {
+  background-position: -137px -75px;
+  opacity: 1;
+}
+.goods-block .goods-carousel__ctrl_nav {
+  width: 100%;
+  min-height: 15px;
+  -webkit-align-self: flex-end;
+  align-self: flex-end;
+}
+.goods-block .goods-carousel__ctrl_nav-elem {
+  width: 8px;
+  height: 8px;
+  margin: 0 3px;
+  background: #909090;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+}
+.goods-block .goods-carousel__ctrl_nav-elem_active {
+  background: #f6b213;
+}
+.goods-block .goods-carousel__ctrl_next {
+  background-position: -90px -75px;
+}
+.goods-block .goods-carousel__ctrl_next:hover {
+  background-position: -159px -75px;
+  opacity: 1;
+}

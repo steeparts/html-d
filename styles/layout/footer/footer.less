@@ -1,0 +1,86 @@
+// * Vars *
+@import '../../less-vars/less-vars';
+
+// * Mixins *
+@import '../../less-mixins/less-mixins';
+
+.footer {
+	padding: 30px 40px;
+	background: @green;	
+	.flex-sb-col;
+	
+	&__top,
+	&__bottom {
+		.flex-sb-row;
+	}
+	
+	&__column {
+		.flex-col;
+		.jc(flex-start);
+		width: calc(100% * 3 / 12);
+
+		&-title {
+			color: #fff;
+			font-weight: 700;
+			font-size: 18px;
+		}
+	}
+
+	&__payment-methods,
+	&__delivery-methods {
+		padding-top: 20px;
+	}
+
+	&__payment-methods {		
+		* {
+			width: 70px;
+			height: 44px;
+			.borderRadius;
+			display: inline-block;
+			background: url(../img/payments.png) no-repeat;
+		}
+	}
+
+	&__payment-wm { background-position: 0 0; }
+	&__payment-qw { background-position: -72px 0; }
+	&__payment-mc { background-position: -145px 0; }
+	&__payment-sv { background-position: 0 -48px; }
+	&__payment-ym { background-position: -72px -48px; }
+	&__payment-vs { background-position: -145px -48px; }
+
+	&__bottom {
+		line-height: 18px;
+		margin-top: 10px;
+		.ai(flex-end);
+	}
+
+	&__copyright,
+	&__author {
+		color: #fff;
+		
+		a {
+			text-decoration: underline;
+			color: #000;
+			
+			&:hover {
+				text-decoration: none;
+			}
+		}
+	}
+	
+	&__social {
+		.vk, .fb, .gp, .yt {
+			display: inline-block;
+			width: 23px;
+			height: 23px;
+			background: url(../img/sprite.png) no-repeat;
+			margin-right: 15px;
+			
+			&:hover { background-color: rgba(255,255,255,.1); }
+		}
+		.vk { background-position: -20px -34px; }
+		.fb { background-position: -58px -34px; }
+		.gp { background-position: -97px -34px; }
+		.yt { background-position: -135px -34px; margin-right: 0; }
+	}
+}

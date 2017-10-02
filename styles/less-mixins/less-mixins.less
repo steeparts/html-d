@@ -1,0 +1,181 @@
+// transition vendor property
+.transition(@param : all 200ms) {
+	-webkit-transition: @param;
+	   -moz-transition: @param;
+	    -ms-transition: @param;
+	     -o-transition: @param;
+	        transition: @param;
+}
+
+// box-sizing vendor property
+.boxSizing() {
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
+// border-radius vendor property
+.borderRadius(@radius : 3px) {
+	-webkit-border-radius: @radius;
+	        border-radius: @radius;
+}
+
+// text preset
+.textEllipsis(@mw : 145px) {
+	max-width: @mw;
+	white-space: nowrap;
+	overflow: hidden;
+	-ms-text-overflow: ellipsis;
+	    text-overflow: ellipsis;
+}
+
+// align-items vendor property
+.ai(@align) {
+	-webkit-align-items: @align;
+	        align-items: @align;
+}
+
+// justify-content vendor property
+.jc(@type) {
+	-webkit-justify-content: @type;
+	       -webkit-box-pack: @type;
+              -ms-flex-pack: @type;
+            justify-content: @type;
+}
+
+// flex-direction vendor property
+.fd(@dir) {
+	-webkit-box-orient: @dir;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: @dir;
+	    -ms-flex-direction: @dir;
+	        flex-direction: @dir;
+}
+
+// display: flex vendor property
+.flex() {
+	display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
+	display: -ms-flexbox;      /* TWEENER - IE 10 */
+	display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
+}
+
+// display: flex with flex-direction: row preset
+.flex-row() {
+	.flex;
+	.fd(row);
+}
+
+// display: flex with flex-direction: column preset
+.flex-col() {
+	.flex;
+	.fd(column);
+}
+
+// display: flex with justify-content: space-around and flex-direction: row preset
+.flex-sa-row() {
+	.flex;
+	.jc(space-around);
+	.fd(row);
+}
+
+// display: flex with justify-content: space-between and flex-direction: row preset
+.flex-sb-row() {
+	.flex;
+	.jc(space-between);
+	.fd(row);
+}
+
+// display: flex with justify-content: space-around and flex-direction: column preset
+.flex-sa-col() {
+	.flex;
+	.jc(space-around);
+	.fd(column);
+}
+
+// display: flex with justify-content: space-between and flex-direction: column preset
+.flex-sb-col() {
+	.flex;
+	.jc(space-between);
+	.fd(column);
+}
+
+// control-panel hover properies
+.ctrl-hov(@pos, @opacity) {
+	background-position: @pos;
+	opacity: @opacity;
+}
+
+// control-panel preset
+.controlPanel(@c-pad, @c-prev-pos, @c-next-pos, @c-prev-hov-pos, @c-next-hov-pos, @c-hov-opacity) {
+	&__control-panel {
+		.flex-sb-row;
+		.ai(center);
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		padding: @c-pad;	
+	}
+		&__ctrl {
+			.flex-row;
+			.ai(center);
+			.jc(center);
+
+			&_prev,
+			&_next {
+				width: 20px;
+				height: 42px;
+				background: url(../img/sprite.png) no-repeat;
+				cursor: pointer;
+				.transition(none);
+			}
+			&_prev {
+				background-position: @c-prev-pos;
+				
+				&:hover {
+					.ctrl-hov(@c-prev-hov-pos, @c-hov-opacity);
+				}
+			}	
+			&_nav {
+				width: 100%;
+				min-height: 15px;
+				-webkit-align-self: flex-end;
+				        align-self: flex-end;
+			}
+			&_nav-elem {
+				width: 8px;
+				height: 8px;
+				margin: 0 3px;
+				background: @gray;
+				.borderRadius(50%);
+
+				&_active {
+					background: @orange;
+				}
+			}
+			&_next {
+				background-position: @c-next-pos;
+				
+				&:hover {
+					.ctrl-hov(@c-next-hov-pos, @c-hov-opacity);
+				}	
+			}			
+		}
+}
+
+// section title preset
+.section-title(@fsize: 24px) {
+	&__title {
+		font-family: @pt-sans-cap;
+		font-size: @fsize;
+		text-transform: uppercase;
+	}
+}
+
+// pests photo preset
+.pests-photo(@img, @pos, @size) {
+	background: url(@img) no-repeat;
+	background-position: @pos;
+	background-size: @size;
+}

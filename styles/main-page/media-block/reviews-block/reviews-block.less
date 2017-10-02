@@ -1,0 +1,51 @@
+// * Vars *
+@import '../../../less-vars/less-vars';
+
+// * Mixins *
+@import '../../../less-mixins/less-mixins';
+
+.reviews-block {
+	width: calc(86% * 4 / 12);
+	padding: 0 5px;
+	
+	a {
+		display: inline-block;
+		line-height: 16px;
+		border-bottom: 1px solid @green;
+		
+		&:hover {
+			color: @dark-green;
+		}
+	}
+	
+	&__photo-container {
+		width: 80px;
+		height: 80px;
+	    .borderRadius(50%);
+	    .flex;
+	    .jc(center);
+	    .ai(baseline);
+	    overflow: hidden;
+	}
+
+	&__user {
+		.flex-row;
+		height: 80px;
+		
+    	&-info {
+			padding-left: 15px;
+    	}
+    		&-name {
+				font-size: 18px;
+				font-weight: 700;
+	    	}
+	    	&-desc {
+				color: @gray;
+	    	}
+	}
+
+	&__text-wrapper {
+		max-height: 100px;
+		overflow: hidden;
+	}
+}

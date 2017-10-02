@@ -1,0 +1,13 @@
+.footer-nav {
+  padding: 14px 0;
+}
+.footer-nav__item {
+  line-height: 22px;
+}
+.footer-nav__item-link {
+  text-decoration: underline;
+  color: #000;
+}
+.footer-nav__item-link:hover {
+  color: #fff;
+}
